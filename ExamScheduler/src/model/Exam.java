@@ -18,6 +18,8 @@ public class Exam
     this.hour = hour;
     this.minute = minute;
     this.examDate = examDate;
+    this.course = course;
+    this.theClass = theClass;
   }
 
   public Exam(Room room, MyDate examFrom, MyDate examTo, Course course,
@@ -26,6 +28,8 @@ public class Exam
     this.room = room;
     this.examFrom = examFrom;
     this.examTo = examTo;
+    this.course = course;
+    this.theClass = theClass;
   }
 
   public Room getRoom()
