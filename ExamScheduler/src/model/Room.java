@@ -38,6 +38,11 @@ public class Room
     return roomName;
   }
 
+  public int getSize()
+  {
+    return size;
+  }
+
   public void setIsArrangedForWritten(boolean isArrangedW)
   {
     this.isArrangedW = isArrangedW;
