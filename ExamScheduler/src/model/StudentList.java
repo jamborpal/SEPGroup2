@@ -18,13 +18,24 @@ public class StudentList {
     }
 
     public Student getStudent(int viaId) {
-
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getViaId() == viaId) {
+                return students.get(i);
+            }
+        }
+        return null;
     }
 
     public int getNumberOfStudents() {
-
+        return students.size();
     }
 
     public String toString() {
+        String s = "";
+        for (int i = 0; i < students.size(); i++) {
+            s += students.get(i).toString();
+            s += "\n";
+        }
+        return s;
     }
 }
