@@ -5,19 +5,19 @@ import java.util.ArrayList;
 
 public class CourseList
 {
-    private ArrayList<Course> courseList;
+    private ArrayList<Course> courseList;//ArrayList of Courses
 
     public CourseList(Course courseList)
     {
         this.courseList = new ArrayList<>();
-    }
+    } //initializing the instance variable courseList
 
     public int getNumberOfCourses()
     {
         return courseList.size();
-    }
+    } //returning the number of courses
 
-    public Course getCourseByName(String name)
+    public Course getCourseByName(String name)////gets a course by its name
     {
         for (int i = 0; i < courseList.size(); i++)
         {
@@ -29,7 +29,7 @@ public class CourseList
         return null;
     }
 
-    public ArrayList<Course> getUnscheduledCourses()
+    public ArrayList<Course> getUnscheduledCourses() //returns the unscheduled courses as an ArrayList
     {
         ArrayList<Course> unscheduled = new ArrayList<>();
         for (int i = 0; i < courseList.size(); i++)
@@ -42,7 +42,7 @@ public class CourseList
         return unscheduled;
     }
 
-    public ArrayList<Course> getCoursesBySemester(int semester)
+    public ArrayList<Course> getCoursesBySemester(int semester) //returns an ArrayList of Courses by semester
     {
         ArrayList<Course> bySemester = new ArrayList<>();
         for (int i = 0; i < courseList.size(); i++)
@@ -55,7 +55,7 @@ public class CourseList
         return bySemester;
     }
 
-    public String toString()
+    public String toString() //returns a String of all the data
     {
         String s = "";
         for (int i = 0; i < courseList.size(); i++)
