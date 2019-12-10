@@ -8,15 +8,20 @@ public class Exam
   private MyDate examDate;
   private MyDate examFrom;
   private MyDate examTo;
+  private Course course;
+  private Class theClass;
 
-  public Exam(Room room, int hour, int minute, MyDate examDate)
+  public Exam(Room room, int hour, int minute, MyDate examDate, Course course,
+      Class theClass)
   {
     this.room = room;
     this.hour = hour;
     this.minute = minute;
     this.examDate = examDate;
   }
-  public Exam(Room room, MyDate examFrom, MyDate examTo)
+
+  public Exam(Room room, MyDate examFrom, MyDate examTo, Course course,
+      Class theClass)
   {
     this.room = room;
     this.examFrom = examFrom;
@@ -43,11 +48,23 @@ public class Exam
     return minute;
   }
 
+  public Course getCourse()
+  {
+    return course;
+  }
+
+  public Class getTheClass()
+  {
+    return theClass;
+  }
+
   public String toString()
   {
-    return "Room: " + room.getRoomName() + System.lineSeparator()
-        + "Exam date: " + examDate + System.lineSeparator() + "Hour: " + hour
-        + System.lineSeparator() + "Minute: " + minute;
+    return "Course: " + getCourse() + System.lineSeparator() + "Class: "
+        + getTheClass() + System.lineSeparator() + "Room: " + room.getRoomName()
+        + System.lineSeparator() + "Exam date: " + examDate + System
+        .lineSeparator() + "Hour: " + hour + System.lineSeparator() + "Minute: "
+        + minute;
 
   }
 
