@@ -6,6 +6,8 @@ public class Exam
   private int hour;
   private int minute;
   private MyDate examDate;
+  private MyDate examFrom;
+  private MyDate examTo;
 
   public Exam(Room room, int hour, int minute, MyDate examDate)
   {
@@ -13,6 +15,12 @@ public class Exam
     this.hour = hour;
     this.minute = minute;
     this.examDate = examDate;
+  }
+  public Exam(Room room, MyDate examFrom, MyDate examTo)
+  {
+    this.room = room;
+    this.examFrom = examFrom;
+    this.examTo = examTo;
   }
 
   public Room getRoom()
@@ -42,4 +50,5 @@ public class Exam
         + System.lineSeparator() + "Minute: " + minute;
 
   }
+
 }
