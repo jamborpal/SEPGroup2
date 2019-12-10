@@ -70,6 +70,9 @@ public class Room
   }
 
   public String toString(){
-    return "The name of the room: " + roomName + System.lineSeparator() + "The size of the room: " + size + System.lineSeparator() + "Has VGA?: " + vga + System.lineSeparator() + "Has HDMI?: " + hdmi + System.lineSeparator() + "Is arranged for written?: " + isArrangedW;
+    return "The name of the room: " + roomName + System.lineSeparator()
+        + "The size of the room: " + size + System.lineSeparator()
+        + "Has VGA?: " + vga + System.lineSeparator() + "Has HDMI?: " + hdmi
+        + System.lineSeparator() + "Is arranged for written?: " + isArrangedW;
   }//returning a String of all the information of the room
 }
