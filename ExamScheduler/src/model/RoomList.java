@@ -40,7 +40,7 @@ public class RoomList
     ArrayList<Room> roomsForOral = new ArrayList<>();
     for (int i = 0; i < rooms.size(); i++)
     {
-      if (rooms.get(i).isCompatibleForOral() == true)
+      if (rooms.get(i).isCompatibleForOral())
       {
         roomsForOral.add(rooms.get(i));
       }
@@ -53,12 +53,23 @@ public class RoomList
     ArrayList<Room> roomsForWritten = new ArrayList<>();
     for (int i = 0; i < rooms.size(); i++)
     {
-      if (rooms.get(i).isCompatibleForOral() == false)
+      if (rooms.get(i).isCompatibleForWritten())
       {
         roomsForWritten.add(rooms.get(i));
       }
     }
     return roomsForWritten;
+  }
+
+
+  public void add(Room room)
+  {
+    rooms.add(room);
+  }
+
+  public void remove(Room room)
+  {
+    rooms.remove(room);
   }
 
   public String toString()
@@ -70,5 +81,10 @@ public class RoomList
       s += ". " + rooms.get(i).toString();
     }
     return s;
+  }
+
+  public int size()
+  {
+    return rooms.size();
   }
 }

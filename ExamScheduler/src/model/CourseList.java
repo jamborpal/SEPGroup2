@@ -34,7 +34,7 @@ public class CourseList
         ArrayList<Course> unscheduled = new ArrayList<>();
         for (int i = 0; i < courseList.size(); i++)
         {
-            if (courseList.get(i).isScheduled() == false)
+            if (!courseList.get(i).isScheduled())
             {
                 unscheduled.add(courseList.get(i));
             }
@@ -42,18 +42,7 @@ public class CourseList
         return unscheduled;
     }
 
-    public ArrayList<Course> getCoursesBySemester(int semester) //returns an ArrayList of Courses by semester
-    {
-        ArrayList<Course> bySemester = new ArrayList<>();
-        for (int i = 0; i < courseList.size(); i++)
-        {
-            if (courseList.get(i).getSemester().getSemesterNumber() == semester)
-            {
-                bySemester.add(courseList.get(i));
-            }
-        }
-        return bySemester;
-    }
+
 
     public String toString() //returns a String of all the data
     {

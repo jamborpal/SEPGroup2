@@ -58,6 +58,11 @@ public class Room
     return vga && hdmi;
   }//returns if the rooms is compatible for an oral exam
 
+  public boolean isCompatibleForWritten()
+  {
+    return size >= 30 && isArrangedW;
+  }
+
   public boolean equals(Object obj) //equals method for the RoomList class to compare Room objects
   {
     if(!(obj instanceof  Room))
@@ -73,6 +78,6 @@ public class Room
     return "The name of the room: " + roomName + System.lineSeparator()
         + "The size of the room: " + size + System.lineSeparator()
         + "Has VGA?: " + vga + System.lineSeparator() + "Has HDMI?: " + hdmi
-        + System.lineSeparator() + "Is arranged for written?: " + isArrangedW;
+        + "\n" + "Is arranged for written?: " + isArrangedW;
   }//returning a String of all the information of the room
 }
