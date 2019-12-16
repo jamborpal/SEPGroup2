@@ -31,7 +31,6 @@ public class Teacher
     public String toString() //returning all the information as a String
     {
         String s = "";
-        s += "Name: ";
         s += firstName + " " + lastName + ", ";
         s += "VIA ID: ";
         s += viaId + ". ";
@@ -42,6 +41,6 @@ public class Teacher
     {
         if (!(obj instanceof Teacher)) return false;
         Teacher other = (Teacher) obj;
-        return this.lastName.equals(other.lastName) && this.viaId.equals(other.viaId) && this.firstName.equals(other.lastName);
+        return this.lastName.equals(other.lastName) && this.viaId.equals(other.viaId) && this.firstName.equals(other.firstName);
     }
 }

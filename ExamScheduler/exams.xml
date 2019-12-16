@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExamList>
+  <exams>
+    <isWritten>false</isWritten>
+    <teacher>
+      <firstName>Mona</firstName>
+      <lastName>Wendel Andersen</lastName>
+      <viaId>efgh</viaId>
+    </teacher>
+    <hour>8</hour>
+    <examRoom>
+      <vga>true</vga>
+      <size>50</size>
+      <hdmi>true</hdmi>
+      <isArrangedW>false</isArrangedW>
+      <roomName>tiu</roomName>
+    </examRoom>
+    <course>
+      <courseName>MSE1</courseName>
+      <teacher>
+        <firstName>Mona</firstName>
+        <lastName>Wendel Andersen</lastName>
+        <viaId>efgh</viaId>
+      </teacher>
+      <isScheduled>true</isScheduled>
+    </course>
+    <dates>
+      <dates>
+        <month>11</month>
+        <year>1010</year>
+        <day>10</day>
+      </dates>
+    </dates>
+    <theClass>
+      <studentCount>20</studentCount>
+      <classRoom>room1</classRoom>
+      <className>Y1</className>
+    </theClass>
+    <minute>30</minute>
+  </exams>
+</ExamList>

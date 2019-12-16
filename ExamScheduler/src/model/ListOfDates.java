@@ -10,6 +10,13 @@ public class ListOfDates
   {
     this.dates = new ArrayList<>();
   }
+  public String allDates(){
+    String s="";
+    for(int i=0; i<dates.size();i++){
+      s+=dates.get(i).toString();
+      s+="\n";
+    }return s;
+  }
 
   public void add(MyDate date)
   {
@@ -30,6 +37,7 @@ public class ListOfDates
   {
     return dates.size();
   }
+
 
   public String toString()
   {

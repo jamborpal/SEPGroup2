@@ -1,6 +1,5 @@
 package model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class RoomList
@@ -9,6 +8,9 @@ public class RoomList
   public RoomList()
   {
     this.rooms = new ArrayList<>();
+  }
+  public ArrayList<Room> getAllRooms(){
+    return rooms;
   }
 
   public Room getRoomByName(String roomName)
@@ -65,6 +67,9 @@ public class RoomList
   public void add(Room room)
   {
     rooms.add(room);
+  }
+  public Room getRoom(int index){
+    return rooms.get(index);
   }
 
   public void remove(Room room)

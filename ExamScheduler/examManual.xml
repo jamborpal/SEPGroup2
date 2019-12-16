@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExamList>
+<Exam>
+ <Course>SDJ1</Course>
+ <Class>Y1</Class>
+ <Date>12/01/2020
+13/01/2020
+</Date>
+ <Room>301a</Room>
+ <Examiner>Steffen Vissing Andersen, VIA ID: something. </Examiner>
+</Exam>
+<Exam>
+ <Course>MSE1</Course>
+ <Class>X1</Class>
+ <Date>13/01/2020
+</Date>
+ <Room>301b</Room>
+ <Examiner>Something something This and That, VIA ID: someone. </Examiner>
+</Exam>
+</ExamList>

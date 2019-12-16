@@ -1,19 +1,16 @@
 package model;
 
-import javax.swing.plaf.ColorUIResource;
-import java.util.ArrayList;
-
 public class Course
 {
   private String courseName; //private instance variables for the data of a course
+  private Teacher teacher;
   private boolean isScheduled;
-  private ArrayList<Teacher> teachers;
 
-  public Course(String courseName) //initializing instance variables
+  public Course(String courseName, Teacher teacher) //initializing instance variables
   {
     this.courseName = courseName;
-    this.isScheduled = false;
-    this.teachers = new ArrayList<>();
+    this.teacher=teacher;
+    this.isScheduled=false;
   }
 
   public String getCourseName()
@@ -21,20 +18,15 @@ public class Course
     return courseName;
   } //returning the name of the course
 
-  public ArrayList<Teacher> getTeachers()
+  public Teacher getTeacher()
   {
-    return teachers;
+    return teacher;
   }//returning the teacher(s) of the course
-
-  public int courseTeacherCount()
-  {
-    return teachers.size();
+  public boolean getIsScheduled(){return isScheduled;}
+  public void setIsScheduled(){this.isScheduled=true;}
+  public void addTeacher(Teacher teacher){
+    this.teacher = teacher;
   }
-
-  public boolean isScheduled()
-  {
-    return isScheduled;
-  }//returning if the exam is already scheduled for the course
 
   public boolean equals(
       Object obj) //equals method for the comparison of two Course objects
@@ -42,29 +34,14 @@ public class Course
     if (!(obj instanceof Course))
       return false;
     Course other = (Course) obj;
-    return this.courseName.equals(other.courseName) && this.teachers
-        .equals(other.teachers) && this.isScheduled == other.isScheduled;
-  }
-  public void addTeacher(Teacher teacher){
-      teachers.add(teacher);
+    return this.courseName.equals(other.courseName) && this.teacher.equals(other.teacher)&&this.isScheduled==other.isScheduled;
   }
 
   public String toString() //returns a String of every information
   {
     String s = "";
-    s += "Course name: " + courseName;
-    if (isScheduled)
-    {
-      s += ", an exam is already scheduled";
-    }
-    else
-      s += ", exam is not scheduled yet";
-    s += ", the teacher(s) are: ";
-    for (int i = 0; i < teachers.size(); i++)
-    {
-      s += teachers.get(i).toString();
-      s += "\n";
-    }
+    s += courseName;
+    s+=", teacher: " + teacher.toString();
     return s;
   }
 }
